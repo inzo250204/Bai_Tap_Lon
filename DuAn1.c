@@ -141,6 +141,7 @@ void update(SV *y) // Cập nhật thông tin sinh viên
     scanf("%d", &x);
     if (x == 1)
     {
+        getchar();
         char NewName[50];
         printf("Moi ban nhap ten moi: ");
         fgets(NewName, sizeof(NewName), stdin);
