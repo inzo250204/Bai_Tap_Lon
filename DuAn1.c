@@ -145,42 +145,42 @@ void update(SV *y) // Cập nhật thông tin sinh viên
         printf("Moi ban nhap ten moi: ");
         fgets(NewName, sizeof(NewName), stdin);
         NewName[strlen(NewName) - 1] = '\0';
-        strcpy((y + id)->name, NewName);
+        strcpy((y + id-1)->name, NewName);
     }
     if (x == 2)
     {
         char NewGt[10];
         printf("Moi ban nhap gioi tinh moi cho sinh vien: ");
         scanf("%s", NewGt);
-        strcpy((y + id)->gt, NewGt);
+        strcpy((y + id-1)->gt, NewGt);
     }
     if (x == 3)
     {
         int NewAge;
         printf("Moi ban nhap tuoi moi cho sinh vien: ");
         scanf("%d", &NewAge);
-        (y + id)->age = NewAge;
+        (y + id-1)->age = NewAge;
     }
     if (x == 4)
     {
         double NewMath;
         printf("Nhap diem moi cho mon toan cua sinh vien: ");
         scanf("%lf", &NewMath);
-        (y + id)->Math = NewMath;
+        (y + id-1)->Math = NewMath;
     }
     if (x == 5)
     {
         double NewPhysics;
         printf("Nhap diem moi cho mon Vat Li cua sinh vien: ");
         scanf("%lf", &NewPhysics);
-        (y + id)->Physics = NewPhysics;
+        (y + id-1)->Physics = NewPhysics;
     }
     if (x == 6)
     {
         double NewChemistry;
         printf("Nhap diem moi cho mon Hoa cua sinh vien: ");
         scanf("%lf", &NewChemistry);
-        (y + id)->Chemistry = NewChemistry;
+        (y + id-1)->Chemistry = NewChemistry;
     }
 }
 
