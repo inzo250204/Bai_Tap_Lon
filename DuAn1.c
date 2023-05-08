@@ -50,15 +50,28 @@ char *Ten(char a[])
 
 void Enter(SV *ptr) // Nhập thông tin sinh viên
 {
+    printf("Nhap id cua sinh vien: ");
     scanf("%d", &(ptr)->id);
+    
     getchar();
+    printf("Nhap ten sinh vien: ");
     fgets((ptr)->name, sizeof(ptr)->name, stdin);
     (ptr)->name[strlen((ptr)->name) - 1] = '\0';
+    
+    printf("Nhap gioi tinh cua sinh vien: ");
     scanf("%s", (ptr)->gt);
+    
+    printf("Nhap tuoi cua sinh vien: ");
     scanf("%d", &(ptr)->age);
+    
+    printf("Nhap diem mon Toan cua sinh vien: ");
     scanf("%lf", &(ptr)->Math);
+    
+    printf("Nhap diem mon Ly cua sinh vien: ");
     scanf("%lf", &(ptr)->Physics);
-    scanf("%lfd", &(ptr)->Chemistry);
+    
+    printf("Nhap diem mon Hoa cua sinh vien: ");
+    scanf("%lf", &(ptr)->Chemistry);
     ptr->GPA = ptr->Math + ptr->Physics + ptr->Chemistry / 3;
 }
 
@@ -81,6 +94,7 @@ void add(SV *ptr, int *n) // Them Sinh vien
     for (int i = n2; i < *n; ++i)
     {
         Enter(ptr + i);
+        printf("\n");
     }
 }
 
