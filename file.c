@@ -82,7 +82,7 @@ void Search(FILE *fp1, FILE *fp2)
                 if (strcmp(SBD, token) == 0)
                 {
                     fprintf(fp2, "%s", kq);
-                    //return;
+                    return;
                 }
                 else
                 {
@@ -114,7 +114,7 @@ void Search(FILE *fp1, FILE *fp2)
                 if (strcmp(MSSV, token) == 0)
                 {
                     fprintf(fp2, "%s", kq);
-                    //return;
+                    return;
                 }
                 else
                 {
@@ -147,7 +147,7 @@ void Search(FILE *fp1, FILE *fp2)
                 if (strcmp(Name, token) == 0)
                 {
                     fprintf(fp2, "%s\n", kq);
-                    //return;
+                    return;
                 }
                 else
                 {
@@ -176,7 +176,7 @@ void Search(FILE *fp1, FILE *fp2)
                 if (strcmp(Class, token) == 0)
                 {
                     fprintf(fp2, "%s\n", kq);
-                    //return;
+                    return;
                 }
                 else
                 {
